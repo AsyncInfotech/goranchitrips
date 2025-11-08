@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Ranchi Trip - Taxi Service in Ranchi</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+  <style>
+    * { transition: .3s ease; }
+    .mobile-menu { display: none; }
+    .mobile-menu.active { display: block; }
+    .hero-gradient { background: linear-gradient(135deg, #facc15, #f59e0b); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- HEADER -->
+<header class="bg-black text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
+    <a href="index.html" class="flex items-center gap-2 font-bold text-2xl text-yellow-400">
+      <i class="ri-taxi-fill text-yellow-400 text-3xl"></i>
+      Go Ranchi Trip
+    </a>
+
+    <nav class="hidden md:flex gap-8 text-lg">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="about.html" class="hover:text-yellow-400">About</a>
+      <a href="services.html" class="hover:text-yellow-400">Services</a>
+      <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-3xl text-yellow-400">
+      <i class="ri-menu-line"></i>
+    </button>
+  </div>
+
+  <nav id="mobileMenu" class="mobile-menu md:hidden bg-black text-center py-4 space-y-4 text-lg">
+    <a href="index.html" class="block hover:text-yellow-400">Home</a>
+    <a href="about.html" class="block hover:text-yellow-400">About</a>
+    <a href="services.html" class="block hover:text-yellow-400">Services</a>
+    <a href="contact.html" class="block hover:text-yellow-400">Contact</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+  btn.addEventListener("click", () => menu.classList.toggle("active"));
+</script>
+
+<!-- HERO SLIDER -->
+<div class="swiper h-[50vh] md:h-[65vh] relative">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide relative">
+      <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-2">Comfortable Taxi Rides</h1>
+        <p class="text-lg md:text-xl">Modern & Well-Maintained Cars</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide relative">
+      <img src="https://images.pexels.com/photos/111764/pexels-photo-111764.jpeg" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-2">24/7 Taxi Booking</h1>
+        <p class="text-lg md:text-xl">Always Available For Your Journey</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide relative">
+      <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-2">Professional Drivers</h1>
+        <p class="text-lg md:text-xl">Safe, Trained & Verified Chauffeurs</p>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+  
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917909044448" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl text-3xl">
+  <i class="ri-whatsapp-fill"></i>
+</a>
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-600">Why Choose Us</h2>
+    <p class="text-gray-600 mt-3 mb-12">Reliable • Affordable • Comfortable</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-time-line"></i></div>
+        <h3 class="font-semibold text-xl mb-2">24/7 Availability</h3>
+        <p class="text-gray-600">We’re always ready to serve you.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-shield-check-line"></i></div>
+        <h3 class="font-semibold text-xl mb-2">Safe & Secure</h3>
+        <p class="text-gray-600">Verified drivers & tracked rides.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-cash-line"></i></div>
+        <h3 class="font-semibold text-xl mb-2">Affordable Pricing</h3>
+        <p class="text-gray-600">No hidden costs ever.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-taxi-line"></i></div>
+        <h3 class="font-semibold text-xl mb-2">Modern Fleet</h3>
+        <p class="text-gray-600">Clean & comfortable vehicles.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CAR FLEET SECTION -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Our Car Fleet</h2>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+    <!-- CAR 1 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1">
+      <img src="images/ertiga1.jpg" class="w-full h-48 object-cover" alt="Ertiga" />
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-semibold mb-1">Maruti Ertiga (7 Seater)</h3>
+        <p class="text-gray-600 text-sm">Comfortable for Family Trips</p>
+        <p class="text-gray-800 font-semibold mt-3">₹13 / Km</p>
+        <a href="contact.html" class="inline-block mt-4 bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-lg text-sm font-medium">
+          Book Now
+        </a>
+      </div>
+    </div>
+
+    <!-- CAR 2 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1">
+      <img src="images/ertiga2.jpg" class="w-full h-48 object-cover" alt="Innova Crysta" />
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-semibold mb-1">Innova Crysta (7 Seater)</h3>
+        <p class="text-gray-600 text-sm">Luxury & Extra Comfort</p>
+        <p class="text-gray-800 font-semibold mt-3">₹18 / Km</p>
+        <a href="contact.html" class="inline-block mt-4 bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-lg text-sm font-medium">
+          Book Now
+        </a>
+      </div>
+    </div>
+
+    <!-- CAR 3 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1">
+      <img src="images/winger1.jpg" class="w-full h-48 object-cover" alt="Sedan" />
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-semibold mb-1">Sedan (Dzire / Xcent)</h3>
+        <p class="text-gray-600 text-sm">Budget Friendly & Smooth Ride</p>
+        <p class="text-gray-800 font-semibold mt-3">₹11 / Km</p>
+        <a href="contact.html" class="inline-block mt-4 bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-lg text-sm font-medium">
+          Book Now
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ PREMIUM TOUR PACKAGES -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+      Popular Ranchi Tour Packages
+    </h2>
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+      Explore the beauty of Jharkhand with our curated and affordable tour plans – perfect for families, couples & groups.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- PACKAGE 1 -->
+      <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all overflow-hidden">
+        <img src="images/betla_tour.jpg" class="w-full h-48 object-cover" alt="Netarhat Trip">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Ranchi → Netarhat</h3>
+          <ul class="text-sm text-gray-600 space-y-1 mb-4">
+            <li>✔ Pickup & Drop</li>
+            <li>✔ Sightseeing Points Covered</li>
+            <li>✔ Experienced Driver</li>
+          </ul>
+          <div class="text-yellow-600 font-bold text-lg mb-4">Starts @ ₹3499 / Trip</div>
+          <a href="contact.html" class="block text-center bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg font-medium">Book Now</a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 2 -->
+      <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all overflow-hidden">
+        <img src="images/netarhat_tour.webp" class="w-full h-48 object-cover" alt="Deoghar Trip">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Ranchi → Deoghar</h3>
+          <ul class="text-sm text-gray-600 space-y-1 mb-4">
+            <li>✔ Premium Travel Experience</li>
+            <li>✔ Baidyanath Dham Darshan</li>
+            <li>✔ Safe Highway Travel</li>
+          </ul>
+          <div class="text-yellow-600 font-bold text-lg mb-4">Starts @ ₹4999 / Trip</div>
+          <a href="contact.html" class="block text-center bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg font-medium">Book Now</a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 3 -->
+      <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all overflow-hidden">
+        <img src="images/betla_tour.jpg" class="w-full h-48 object-cover" alt="Patratu Valley Trip">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Ranchi → Patratu Valley</h3>
+          <ul class="text-sm text-gray-600 space-y-1 mb-4">
+            <li>✔ Scenic Hills & Lake View</li>
+            <li>✔ Perfect for Couples</li>
+            <li>✔ Flexible Timings</li>
+          </ul>
+          <div class="text-yellow-600 font-bold text-lg mb-4">Starts @ ₹999 / Trip</div>
+          <a href="contact.html" class="block text-center bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg font-medium">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- STATS -->
+<section class="py-16 hero-gradient text-white">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div><div class="text-4xl font-bold">10,000+</div><p>Happy Customers</p></div>
+    <div><div class="text-4xl font-bold">500+</div><p>Daily Rides</p></div>
+    <div><div class="text-4xl font-bold">4.9</div><p>Rating Score</p></div>
+    <div><div class="text-4xl font-bold">24/7</div><p>Service Available</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 text-center">
+  <h2 class="text-3xl md:text-5xl font-bold mb-4">Book Your Ride Now</h2>
+  <p class="text-gray-600 mb-8">Quick, Easy & Reliable Taxi Service</p>
+  <a href="tel:+919876543210" class="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg shadow-lg text-lg">
+    Call Now
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <div>
+      <h3 class="text-xl font-semibold text-yellow-400 mb-3">Go Ranchi Trip</h3>
+      <p class="text-gray-400">Your trusted travel partner in Ranchi.</p>
+    </div>
+
+    <div>
+      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="services.html" class="hover:text-yellow-400">Services</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Contact</h4>
+      <p class="text-gray-300">📍 Ranchi, Jharkhand</p>
+      <p class="text-gray-300">📞 +91 98765 43210</p>
+      <p class="text-gray-300">✉ contact@goranchitrip.in</p>
+    </div>
+
+  </div>
+  <p class="text-center text-gray-500 mt-6">© 2025 Go Ranchi Trip. All Rights Reserved.</p>
+</footer>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  new Swiper(".swiper", {
+    loop: true,
+    autoplay: { delay: 2500 },
+    speed: 800,
+    effect: "fade",
+  });
+</script>
+
+</body>
+</html>
