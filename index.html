@@ -19,6 +19,23 @@
     .mobile-menu { display: none; }
     .mobile-menu.active { display: block; }
     .hero-gradient { background: linear-gradient(135deg, #facc15, #f59e0b); }
+
+     @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeInUp { animation: fadeInUp 0.8s forwards; }
+
+  /* Fly-in cards on scroll */
+  .fly-in {
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+
+  .fly-in.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
   </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
@@ -62,7 +79,7 @@
   <div class="swiper-wrapper">
 
     <div class="swiper-slide relative">
-      <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg" class="w-full h-full object-cover" />
+      <img src="images/ertiga2.jpg" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center">
         <h1 class="text-4xl md:text-6xl font-bold mb-2">Comfortable Taxi Rides</h1>
         <p class="text-lg md:text-xl">Modern & Well-Maintained Cars</p>
@@ -78,7 +95,7 @@
     </div>
 
     <div class="swiper-slide relative">
-      <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg" class="w-full h-full object-cover" />
+      <img src="images/ertiga1.jpg" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center">
         <h1 class="text-4xl md:text-6xl font-bold mb-2">Professional Drivers</h1>
         <p class="text-lg md:text-xl">Safe, Trained & Verified Chauffeurs</p>
@@ -97,34 +114,57 @@
 </a>
 </div>
 
-<!-- WHY CHOOSE US -->
+<!-- WHY CHOOSE US INTRO WITH ANIMATION -->
+<section class="py-12 bg-gray-50 text-center overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Animated headline -->
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeInUp">
+      Experience the <span class="text-yellow-500">Difference</span> with Go Ranchi Trip
+    </h2>
+
+    <!-- Subtext -->
+    <p class="text-gray-600 text-lg md:text-xl mb-6 animate-fadeInUp delay-200">
+      Your journey matters to us. From timely pickups to comfortable rides, we ensure every trip is smooth, safe, and memorable.
+    </p>
+
+    <!-- Decorative gradient line -->
+    <div class="w-24 h-1 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mb-6 animate-fadeInUp delay-400"></div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US CARDS WITH FLY-IN -->
 <section class="py-16">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-5xl font-bold text-yellow-600">Why Choose Us</h2>
-    <p class="text-gray-600 mt-3 mb-12">Reliable • Affordable • Comfortable</p>
-
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
-        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-time-line"></i></div>
+      
+      <div class="p-6 border rounded-xl bg-white shadow-lg transform translate-y-20 opacity-0 hover:shadow-2xl transition duration-500 fly-in">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl">
+          <i class="ri-time-line"></i>
+        </div>
         <h3 class="font-semibold text-xl mb-2">24/7 Availability</h3>
         <p class="text-gray-600">We’re always ready to serve you.</p>
       </div>
 
-      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
-        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-shield-check-line"></i></div>
+      <div class="p-6 border rounded-xl bg-white shadow-lg transform translate-y-20 opacity-0 hover:shadow-2xl transition duration-500 fly-in delay-200">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl">
+          <i class="ri-shield-check-line"></i>
+        </div>
         <h3 class="font-semibold text-xl mb-2">Safe & Secure</h3>
         <p class="text-gray-600">Verified drivers & tracked rides.</p>
       </div>
 
-      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
-        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-cash-line"></i></div>
+      <div class="p-6 border rounded-xl bg-white shadow-lg transform translate-y-20 opacity-0 hover:shadow-2xl transition duration-500 fly-in delay-400">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl">
+          <i class="ri-cash-line"></i>
+        </div>
         <h3 class="font-semibold text-xl mb-2">Affordable Pricing</h3>
         <p class="text-gray-600">No hidden costs ever.</p>
       </div>
 
-      <div class="p-6 border rounded-xl hover:shadow-2xl transition">
-        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl"><i class="ri-taxi-line"></i></div>
+      <div class="p-6 border rounded-xl bg-white shadow-lg transform translate-y-20 opacity-0 hover:shadow-2xl transition duration-500 fly-in delay-600">
+        <div class="w-16 h-16 mx-auto bg-yellow-400 text-black rounded-full flex items-center justify-center mb-4 text-3xl">
+          <i class="ri-taxi-line"></i>
+        </div>
         <h3 class="font-semibold text-xl mb-2">Modern Fleet</h3>
         <p class="text-gray-600">Clean & comfortable vehicles.</p>
       </div>
@@ -180,6 +220,8 @@
 
   </div>
 </section>
+
+
 
 <!-- ✅ PREMIUM TOUR PACKAGES -->
 <section class="bg-gray-50 py-16">
@@ -242,6 +284,71 @@
   </div>
 </section>
 
+<!-- GOOGLE REVIEWS SECTION -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+    <p class="text-gray-600 mb-12">Real feedback from our valued customers.</p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Review 1 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Reviewer" class="w-12 h-12 rounded-full mr-3">
+          <div class="text-left">
+            <h4 class="font-semibold text-gray-900">Rahul S.</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Excellent service! The cab was clean and the driver was very professional. Highly recommended for city and outstation travel."</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Reviewer" class="w-12 h-12 rounded-full mr-3">
+          <div class="text-left">
+            <h4 class="font-semibold text-gray-900">Neha K.</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Very satisfied with the ride! The driver was punctual, and the journey was smooth and comfortable."</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+        <div class="flex items-center mb-4">
+          <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Reviewer" class="w-12 h-12 rounded-full mr-3">
+          <div class="text-left">
+            <h4 class="font-semibold text-gray-900">Amit R.</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"Go Ranchi Trip made our outstation trip effortless! Highly recommend their 7-seater cars for family trips."</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- STATS -->
@@ -264,16 +371,31 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-black text-white py-10">
+<footer class="bg-black text-white pt-12 pb-6">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <div>
-      <h3 class="text-xl font-semibold text-yellow-400 mb-3">Go Ranchi Trip</h3>
+    <!-- Brand -->
+    <div class="flex flex-col gap-4">
+      <h3 class="text-2xl font-bold text-yellow-400 flex items-center gap-2">
+        <i class="ri-taxi-fill text-yellow-400 text-3xl"></i> Go Ranchi Trip
+      </h3>
       <p class="text-gray-400">Your trusted travel partner in Ranchi.</p>
+      <div class="flex gap-4 mt-2">
+        <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-blue-600 text-2xl">
+          <i class="ri-facebook-fill"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-pink-500 text-2xl">
+          <i class="ri-instagram-fill"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="text-gray-400 hover:text-red-600 text-2xl">
+          <i class="ri-youtube-fill"></i>
+        </a>
+      </div>
     </div>
 
-    <div>
-      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Quick Links</h4>
+    <!-- Quick Links -->
+    <div class="flex flex-col gap-4">
+      <h4 class="text-xl font-semibold text-yellow-400 mb-3">Quick Links</h4>
       <ul class="space-y-2 text-gray-300">
         <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
         <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
@@ -282,16 +404,29 @@
       </ul>
     </div>
 
-    <div>
-      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Contact</h4>
-      <p class="text-gray-300">📍 Ranchi, Jharkhand</p>
-      <p class="text-gray-300">📞 +91 98765 43210</p>
-      <p class="text-gray-300">✉ contact@goranchitrip.in</p>
+    <!-- Contact Info -->
+    <div class="flex flex-col gap-4">
+      <h4 class="text-xl font-semibold text-yellow-400 mb-3">Contact Us</h4>
+      <p class="text-gray-300 flex items-center gap-2">
+        <i class="ri-map-pin-line"></i> Ranchi, Jharkhand
+      </p>
+      <p class="text-gray-300 flex items-center gap-2">
+        <i class="ri-phone-line"></i> <a href="tel:+917909044448" class="hover:text-yellow-400">+91 79090 44448</a>
+      </p>
+      <p class="text-gray-300 flex items-center gap-2">
+        <i class="ri-mail-line"></i> <a href="mailto:contact@goranchitrip.in" class="hover:text-yellow-400">contact@goranchitrip.in</a>
+      </p>
     </div>
 
   </div>
-  <p class="text-center text-gray-500 mt-6">© 2025 Go Ranchi Trip. All Rights Reserved.</p>
+
+  <!-- Bottom Text -->
+  <p class="text-center text-gray-500 mt-6">
+    © 2025 Go Ranchi Trip. All Rights Reserved. <br>
+    <span class="text-gray-400">Powered by <a href="https://www.asyncinfotech.com" class="hover:text-yellow-400">Async Infotech</a></span>
+  </p>
 </footer>
+
 
 
 <!-- Swiper JS -->
@@ -303,6 +438,20 @@
     speed: 800,
     effect: "fade",
   });
+
+
+    // Trigger fly-in animation on scroll
+  const flyCards = document.querySelectorAll('.fly-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  flyCards.forEach(card => observer.observe(card));
 </script>
 
 </body>

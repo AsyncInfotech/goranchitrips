@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Go Ranchi Trip</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
   <script src="https://unpkg.com/feather-icons"></script>
 
  <style>
@@ -18,45 +20,62 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- HEADER -->
- <header class="fixed top-0 left-0 w-full bg-black shadow z-50">
-  <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-    <a href="index.html" class="flex items-center gap-2">
-      <i data-feather="map-pin" class="text-yellow-500"></i>
-      <span class="text-2xl font-bold text-white">Go Ranchi Trip</span>
+ <!-- HEADER -->
+<header class="bg-black text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
+    <a href="index.html" class="flex items-center gap-2 font-bold text-2xl text-yellow-400">
+      <i class="ri-taxi-fill text-yellow-400 text-3xl"></i>
+      Go Ranchi Trip
     </a>
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex gap-8 text-lg">
-      <a href="index.html" class="hover:text-yellow-500 transition text-white font-semibold">Home</a>
-      <a href="about.html" class="hover:text-yellow-500 transition text-white">About</a>
-      <a href="services.html" class="hover:text-yellow-500 transition text-white">Services</a>
-      <a href="contact.html" class="hover:text-yellow-500 transition text-white">Contact</a>
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="about.html" class="hover:text-yellow-400">About</a>
+      <a href="services.html" class="hover:text-yellow-400">Services</a>
+      <a href="contact.html" class="hover:text-yellow-400">Contact</a>
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button id="menuBtn" class="md:hidden">
-      <i data-feather="menu" class="w-7 h-7 text-white"></i>
+    <button id="menuBtn" class="md:hidden text-3xl text-yellow-400">
+      <i class="ri-menu-line"></i>
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="hidden flex flex-col bg-black border-t border-gray-700">
-    <a href="index.html" class="py-3 px-6 border-b border-gray-700 hover:bg-gray-800 text-white font-semibold">Home</a>
-    <a href="about.html" class="py-3 px-6 border-b border-gray-700 hover:bg-gray-800 text-white">About</a>
-    <a href="services.html" class="py-3 px-6 border-b border-gray-700 hover:bg-gray-800 text-white">Services</a>
-    <a href="contact.html" class="py-3 px-6 hover:bg-gray-800 text-white">Contact</a>
+  <nav id="mobileMenu" class="mobile-menu md:hidden bg-black text-center py-4 space-y-4 text-lg">
+    <a href="index.html" class="block hover:text-yellow-400">Home</a>
+    <a href="about.html" class="block hover:text-yellow-400">About</a>
+    <a href="services.html" class="block hover:text-yellow-400">Services</a>
+    <a href="contact.html" class="block hover:text-yellow-400">Contact</a>
   </nav>
 </header>
 
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+  btn.addEventListener("click", () => menu.classList.toggle("active"));
+</script>
+
+
   <!-- ABOUT BANNER -->
-  <section class="pt-32 pb-20 bg-yellow-50 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">About Us</h1>
-    <p class="mt-3 text-lg text-gray-600">Your trusted taxi service in Ranchi.</p>
-  </section>
+<section class="pt-16 -mt-12 pb-16 bg-yellow-50 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900">About Us</h1>
+  <p class="mt-3 text-lg text-gray-600">Your trusted taxi service in Ranchi.</p>
+
+  <p class="mt-6 max-w-2xl mx-auto text-gray-700 leading-relaxed">
+    At Go Ranchi Trip, we believe every journey should be comfortable, safe, and memorable. 
+    With a fleet of modern cars and professional drivers, we make sure your travel experience is seamless, whether it's a short city ride or a scenic outstation trip.
+  </p>
+</section>
+
+
+
+
 
   <!-- ABOUT CONTENT -->
   <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-    <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg" class="rounded-lg shadow" alt="Taxi Image">
+    <img src="images/ertiga2.jpg" class="rounded-lg shadow" alt="Taxi Image">
 
     <div>
       <h2 class="text-3xl font-bold mb-4 text-gray-900">We Make Travel Easy & Comfortable</h2>
@@ -142,32 +161,63 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-xl font-bold text-white">Go Ranchi Trip</h3>
-        <p class="mt-3 leading-relaxed">Reliable taxi service for local & outstation travel.</p>
-      </div>
+ <!-- FOOTER -->
+<footer class="bg-black text-white pt-12 pb-6">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <div>
-        <h4 class="text-lg font-semibold text-white">Quick Links</h4>
-        <ul class="mt-3 space-y-2">
-          <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
-          <li><a href="about.html" class="hover:text-yellow-500">About</a></li>
-          <li><a href="services.html" class="hover:text-yellow-500">Services</a></li>
-          <li><a href="contact.html" class="hover:text-yellow-500">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-lg font-semibold text-white">Contact</h4>
-        <p class="mt-3">📍 Ranchi, Jharkhand</p>
-        <p>📞 +91 00000 00000</p>
+    <!-- Brand -->
+    <div class="flex flex-col gap-4">
+      <h3 class="text-2xl font-bold text-yellow-400 flex items-center gap-2">
+        <i class="ri-taxi-fill text-yellow-400 text-3xl"></i> Go Ranchi Trip
+      </h3>
+      <p class="text-gray-400">Your trusted travel partner in Ranchi.</p>
+      <div class="flex gap-4 mt-2">
+        <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-blue-600 text-2xl">
+          <i class="ri-facebook-fill"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-pink-500 text-2xl">
+          <i class="ri-instagram-fill"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="text-gray-400 hover:text-red-600 text-2xl">
+          <i class="ri-youtube-fill"></i>
+        </a>
       </div>
     </div>
 
-    <p class="text-center mt-8 text-sm text-gray-400">© 2025 Go Ranchi Trip. All rights reserved.</p>
-  </footer>
+    <!-- Quick Links -->
+    <div class="flex flex-col gap-4">
+      <h4 class="text-xl font-semibold text-yellow-400 mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="services.html" class="hover:text-yellow-400">Services</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col gap-4">
+      <h4 class="text-xl font-semibold text-yellow-400 mb-3">Contact Us</h4>
+      <p class="text-gray-300 flex items-center gap-2">
+        <i class="ri-map-pin-line"></i> Ranchi, Jharkhand
+      </p>
+      <p class="text-gray-300 flex items-center gap-2">
+        <i class="ri-phone-line"></i> <a href="tel:+917909044448" class="hover:text-yellow-400">+91 79090 44448</a>
+      </p>
+      <p class="text-gray-300 flex items-center gap-2">
+        <i class="ri-mail-line"></i> <a href="mailto:contact@goranchitrip.in" class="hover:text-yellow-400">contact@goranchitrip.in</a>
+      </p>
+    </div>
+
+  </div>
+
+ <!-- Bottom Text -->
+  <p class="text-center text-gray-500 mt-6">
+    © 2025 Go Ranchi Trip. All Rights Reserved. <br>
+    <span class="text-gray-400">Powered by <a href="https://www.asyncinfotech.com" class="hover:text-yellow-400">Async Infotech</a></span>
+  </p>
+</footer>
+
 
   <script>
     feather.replace();
