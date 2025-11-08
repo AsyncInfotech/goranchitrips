@@ -7,6 +7,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
   <script src="https://unpkg.com/feather-icons"></script>
 
@@ -25,14 +26,36 @@
       justify-content: center;
       align-items: center;
       font-size: 32px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
       z-index: 100;
+      animation: bounce 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
     }
 
     * { transition: .3s ease; }
     .mobile-menu { display: none; }
     .mobile-menu.active { display: block; }
-    .hero-gradient { background: linear-gradient(135deg, #facc15, #f59e0b); }
+    .faq-item { cursor: pointer; }
+
+
+     /* Floating Animations */
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(15deg); }
+  }
+  @keyframes floatFast {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-15deg); }
+  }
+  .animate-float-slow { animation: floatSlow 8s ease-in-out infinite; }
+  .animate-float-fast { animation: floatFast 5s ease-in-out infinite; }
   </style>
 </head>
 
@@ -42,9 +65,9 @@
   <header class="fixed top-0 left-0 w-full bg-black shadow z-50">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
        <a href="index.html" class="flex items-center gap-2 font-bold text-2xl text-yellow-400">
-      <i class="ri-taxi-fill text-yellow-400 text-3xl"></i>
-      Go Ranchi Trip
-    </a>
+        <i class="ri-taxi-fill text-yellow-400 text-3xl"></i>
+        Go Ranchi Trip
+      </a>
 
       <!-- Desktop Menu -->
       <nav class="hidden md:flex gap-8 text-lg">
@@ -70,39 +93,47 @@
   </header>
 
   <!-- HERO -->
-  <section class="pt-32 pb-16 text-center bg-yellow-50">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Contact Us</h1>
-    <p class="mt-3 text-lg text-gray-600">We are always ready to assist you.</p>
-    <p class="mt-6 max-w-2xl mx-auto text-gray-700 leading-relaxed">
+<section class="relative pt-32 pb-16 text-center bg-yellow-50 overflow-hidden" data-aos="fade-down" data-aos-duration="1000">
+
+  <!-- Floating Shapes -->
+  <div class="absolute top-0 left-1/4 w-32 h-32 bg-yellow-200 rounded-full opacity-40 animate-float-slow"></div>
+  <div class="absolute top-1/2 right-1/4 w-24 h-24 bg-yellow-300 rounded-full opacity-50 animate-float-fast"></div>
+  <div class="absolute bottom-0 left-1/3 w-48 h-48 bg-yellow-100 rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute bottom-1/4 right-1/3 w-20 h-20 bg-yellow-300 rounded-full opacity-50 animate-float-fast"></div>
+
+  <!-- Hero Text -->
+  <h1 class="relative text-4xl md:text-5xl font-bold text-gray-900 z-10">Contact Us</h1>
+  <p class="relative mt-3 text-lg text-gray-600 z-10">We are always ready to assist you.</p>
+  <p class="relative mt-6 max-w-2xl mx-auto text-gray-700 leading-relaxed z-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
     Have a question, want to book a ride, or need travel guidance? 
     Reach out to us via phone, email, or WhatsApp. 
     Our team at Go Ranchi Trip is ready to provide quick and reliable assistance for your journey.
   </p>
-  </section>
+</section>
 
   <!-- CONTACT INFO -->
-  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10" data-aos="fade-up" data-aos-duration="1000">
     <div class="space-y-6">
       <h2 class="text-3xl font-bold text-gray-900">Get in Touch</h2>
       <p class="text-gray-700">Have questions or want to book a ride? Reach out to us via phone, email, or WhatsApp. We’re here to help you make your journey safe and comfortable.</p>
 
-      <div class="flex items-center gap-4">
-        <i data-feather="phone" class="text-yellow-500 w-6 h-6"></i>
+      <div class="flex items-center gap-4 group">
+        <i data-feather="phone" class="text-yellow-500 w-6 h-6 group-hover:animate-bounce"></i>
         <span class="text-gray-800 font-semibold">+91 79090 44448</span>
       </div>
 
-      <div class="flex items-center gap-4">
-        <i data-feather="mail" class="text-yellow-500 w-6 h-6"></i>
+      <div class="flex items-center gap-4 group">
+        <i data-feather="mail" class="text-yellow-500 w-6 h-6 group-hover:animate-bounce"></i>
         <span class="text-gray-800 font-semibold">info@goranchitrip.com</span>
       </div>
 
-      <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition mt-4">
+      <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition mt-4 transform hover:scale-105">
         WhatsApp Us
       </a>
     </div>
 
     <!-- MAP -->
-    <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
+    <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.123456789!2d85.309123456!3d23.344123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e23456789%3A0xabcdef123456789!2sRanchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -110,37 +141,46 @@
   </section>
 
   <!-- CONTACT FORM -->
-  <section class="max-w-4xl mx-auto px-6 py-16 bg-white shadow-lg rounded-lg mt-12">
+  <section class="max-w-4xl mx-auto px-6 py-16 bg-white shadow-lg rounded-lg mt-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
     <h2 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Book Your Ride</h2>
 
     <form id="bookingForm" class="grid gap-6">
-      <input required type="text" id="name" placeholder="Your Name" class="w-full border p-3 rounded">
-      <input required type="tel" id="phone" placeholder="Phone Number" class="w-full border p-3 rounded">
-      <input required type="text" id="pickup" placeholder="Pickup Location" class="w-full border p-3 rounded">
-      <input required type="text" id="drop" placeholder="Drop Location" class="w-full border p-3 rounded">
-      <input required type="date" id="date" class="w-full border p-3 rounded">
+      <input required type="text" id="name" placeholder="Your Name" class="w-full border p-3 rounded focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      <input required type="tel" id="phone" placeholder="Phone Number" class="w-full border p-3 rounded focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      <input required type="text" id="pickup" placeholder="Pickup Location" class="w-full border p-3 rounded focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      <input required type="text" id="drop" placeholder="Drop Location" class="w-full border p-3 rounded focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+      <input required type="date" id="date" class="w-full border p-3 rounded focus:ring-2 focus:ring-yellow-400 focus:outline-none">
 
-      <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 rounded">
+      <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 rounded transform hover:scale-105">
         Send Booking Request
       </button>
     </form>
   </section>
 
   <!-- FAQ SECTION -->
-  <section class="max-w-7xl mx-auto px-6 py-16 mt-12">
+  <section class="max-w-7xl mx-auto px-6 py-16 mt-12" data-aos="fade-up" data-aos-duration="1000">
     <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
-    <div class="space-y-6">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer">
-        <h3 class="text-lg font-semibold text-gray-900">What are your operating hours?</h3>
-        <p class="text-gray-700 mt-2">We operate 24/7 to ensure your rides are always available whenever you need them.</p>
+    <div class="space-y-4">
+      <div class="faq-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-gray-900 flex justify-between items-center">
+          What are your operating hours?
+          <i data-feather="chevron-down"></i>
+        </h3>
+        <p class="text-gray-700 mt-2 hidden">We operate 24/7 to ensure your rides are always available whenever you need them.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer">
-        <h3 class="text-lg font-semibold text-gray-900">Do you provide outstation trips?</h3>
-        <p class="text-gray-700 mt-2">Yes! We cover nearby tourist destinations and one-way drop services across Jharkhand.</p>
+      <div class="faq-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-gray-900 flex justify-between items-center">
+          Do you provide outstation trips?
+          <i data-feather="chevron-down"></i>
+        </h3>
+        <p class="text-gray-700 mt-2 hidden">Yes! We cover nearby tourist destinations and one-way drop services across Jharkhand.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition cursor-pointer">
-        <h3 class="text-lg font-semibold text-gray-900">How can I book a ride?</h3>
-        <p class="text-gray-700 mt-2">You can book via our contact form, WhatsApp, or directly call us at +91 79090 44448.</p>
+      <div class="faq-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-gray-900 flex justify-between items-center">
+          How can I book a ride?
+          <i data-feather="chevron-down"></i>
+        </h3>
+        <p class="text-gray-700 mt-2 hidden">You can book via our contact form, WhatsApp, or directly call us at +91 79090 44448.</p>
       </div>
     </div>
   </section>
@@ -151,70 +191,55 @@
   </a>
 
   <!-- FOOTER -->
- <!-- FOOTER -->
-<footer class="bg-black text-white pt-12 pb-6">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- Brand -->
-    <div class="flex flex-col gap-4">
-      <h3 class="text-2xl font-bold text-yellow-400 flex items-center gap-2">
-        <i class="ri-taxi-fill text-yellow-400 text-3xl"></i> Go Ranchi Trip
-      </h3>
-      <p class="text-gray-400">Your trusted travel partner in Ranchi.</p>
-      <div class="flex gap-4 mt-2">
-        <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-blue-600 text-2xl">
-          <i class="ri-facebook-fill"></i>
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-pink-500 text-2xl">
-          <i class="ri-instagram-fill"></i>
-        </a>
-        <a href="https://www.youtube.com" target="_blank" class="text-gray-400 hover:text-red-600 text-2xl">
-          <i class="ri-youtube-fill"></i>
-        </a>
+  <footer class="bg-black text-white pt-12 pb-6" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div class="flex flex-col gap-4">
+        <h3 class="text-2xl font-bold text-yellow-400 flex items-center gap-2">
+          <i class="ri-taxi-fill text-yellow-400 text-3xl"></i> Go Ranchi Trip
+        </h3>
+        <p class="text-gray-400">Your trusted travel partner in Ranchi.</p>
+        <div class="flex gap-4 mt-2">
+          <a href="#" class="text-gray-400 hover:text-blue-600 text-2xl"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="text-gray-400 hover:text-pink-500 text-2xl"><i class="ri-instagram-fill"></i></a>
+          <a href="#" class="text-gray-400 hover:text-red-600 text-2xl"><i class="ri-youtube-fill"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="flex flex-col gap-4">
+        <h4 class="text-xl font-semibold text-yellow-400 mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400">Services</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="flex flex-col gap-4">
+        <h4 class="text-xl font-semibold text-yellow-400 mb-3">Contact Us</h4>
+        <p class="text-gray-300 flex items-center gap-2"><i class="ri-map-pin-line"></i> Ranchi, Jharkhand</p>
+        <p class="text-gray-300 flex items-center gap-2"><i class="ri-phone-line"></i> <a href="tel:+917909044448" class="hover:text-yellow-400">+91 79090 44448</a></p>
+        <p class="text-gray-300 flex items-center gap-2"><i class="ri-mail-line"></i> <a href="mailto:contact@goranchitrip.in" class="hover:text-yellow-400">contact@goranchitrip.in</a></p>
       </div>
     </div>
+    <p class="text-center text-gray-500 mt-6">
+      © 2025 Go Ranchi Trip. All Rights Reserved. <br>
+      <span class="text-gray-400">Powered by <a href="https://www.asyncinfotech.com" class="hover:text-yellow-400">Async Infotech</a></span>
+    </p>
+  </footer>
 
-    <!-- Quick Links -->
-    <div class="flex flex-col gap-4">
-      <h4 class="text-xl font-semibold text-yellow-400 mb-3">Quick Links</h4>
-      <ul class="space-y-2 text-gray-300">
-        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-        <li><a href="services.html" class="hover:text-yellow-400">Services</a></li>
-        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="flex flex-col gap-4">
-      <h4 class="text-xl font-semibold text-yellow-400 mb-3">Contact Us</h4>
-      <p class="text-gray-300 flex items-center gap-2">
-        <i class="ri-map-pin-line"></i> Ranchi, Jharkhand
-      </p>
-      <p class="text-gray-300 flex items-center gap-2">
-        <i class="ri-phone-line"></i> <a href="tel:+917909044448" class="hover:text-yellow-400">+91 79090 44448</a>
-      </p>
-      <p class="text-gray-300 flex items-center gap-2">
-        <i class="ri-mail-line"></i> <a href="mailto:contact@goranchitrip.in" class="hover:text-yellow-400">contact@goranchitrip.in</a>
-      </p>
-    </div>
-
-  </div>
-
- <!-- Bottom Text -->
-  <p class="text-center text-gray-500 mt-6">
-    © 2025 Go Ranchi Trip. All Rights Reserved. <br>
-    <span class="text-gray-400">Powered by <a href="https://www.asyncinfotech.com" class="hover:text-yellow-400">Async Infotech</a></span>
-  </p>
-</footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     feather.replace();
+    AOS.init({ once: true });
 
+    // Mobile menu toggle
     document.getElementById("menuBtn").onclick = () => {
       document.getElementById("mobileMenu").classList.toggle("hidden");
     };
 
+    // WhatsApp form submission
     document.getElementById("bookingForm").addEventListener("submit", function(e) {
       e.preventDefault();
       let name = document.getElementById("name").value;
@@ -222,16 +247,18 @@
       let pickup = document.getElementById("pickup").value;
       let drop = document.getElementById("drop").value;
       let date = document.getElementById("date").value;
+      let message = `New Cab Booking Request:%0AName: ${name}%0APhone: ${phone}%0APickup: ${pickup}%0ADrop: ${drop}%0ADate: ${date}`;
+      window.open(`https://wa.me/917909044448?text=${message}`, "_blank");
+    });
 
-      let message = `New Cab Booking Request:
-Name: ${name}
-Phone: ${phone}
-Pickup: ${pickup}
-Drop: ${drop}
-Date: ${date}`;
-
-      let url = `https://wa.me/917909044448?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
+    // FAQ Accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const p = item.querySelector('p');
+        p.classList.toggle('hidden');
+        const icon = item.querySelector('i');
+        icon.classList.toggle('rotate-180');
+      });
     });
   </script>
 

@@ -8,6 +8,8 @@
  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Include AOS CSS in <head> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
    <style>
     * { transition: .3s ease; }
@@ -51,111 +53,116 @@
 </header>
 
   <!-- HERO -->
-  <section class="pt-32 pb-20 bg-yellow-50 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Our Services</h1>
-    <p class="mt-3 text-lg text-gray-600">Comfortable rides for every occasion.</p>
-     <p class="mt-6 max-w-2xl mx-auto text-gray-700 leading-relaxed">
-   From city rides to outstation trips, airport pickups to sightseeing tours, 
-    Go Ranchi Trip ensures safety, punctuality, and a hassle-free travel experience. 
-    Choose the right ride for your journey and enjoy peace of mind with every trip.
+  <section class="pt-32 pb-20 bg-gradient-to-r from-yellow-50 to-yellow-100 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-down" data-aos-duration="1000">Our Services</h1>
+  <p class="mt-3 text-lg text-gray-600" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Comfortable rides for every occasion.</p>
+  <p class="mt-6 max-w-2xl mx-auto text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+    From city rides to outstation trips, airport pickups to sightseeing tours, Go Ranchi Trip ensures safety, punctuality, and a hassle-free travel experience. Choose the right ride for your journey and enjoy peace of mind with every trip.
   </p>
-  </section>
+</section>
 
- <!-- TOUR PACKAGES WITH IMAGE -->
+
+<!-- TOUR PACKAGES WITH IMAGE -->
 <section class="max-w-7xl mx-auto px-6 py-16">
   <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Tour Packages</h2>
 
   <div class="grid md:grid-cols-3 gap-8">
     <!-- Package 1 -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+    <div data-aos="fade-up" data-aos-duration="1000" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
       <img src="images/betla_tour.jpg" class="w-full h-48 object-cover" alt="Jhona Sita Hundru">
       <div class="p-6 text-center">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Jhona, Sita & Hundru Waterfalls</h3>
         <p class="text-gray-700 mb-2">Explore the mesmerizing waterfalls of Ranchi with a 7-seater car (Ertiga). Perfect for family trips or friends’ outings.</p>
         <p class="text-gray-700 font-semibold mb-4">4 Days Tour – ₹16,000</p>
-        <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">WhatsApp Enquiry</a>
+        <a href="https://wa.me/917909044448?text=Hello%20Go%20Ranchi%20Trip,%20I%20would%20like%20to%20book%20the%20Jhona,%20Sita%20%26%20Hundru%20Waterfalls%20Tour%20(4%20Days,%20₹16,000).%20Please%20assist%20me%20with%20the%20booking."
+           target="_blank"
+           class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+           WhatsApp Enquiry
+        </a>
       </div>
     </div>
 
     <!-- Package 2 -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
       <img src="images/netarhat_tour.webp" class="w-full h-48 object-cover" alt="Netarhat Lodh Waterfall">
       <div class="p-6 text-center">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Netarhat & Lodh Waterfalls</h3>
         <p class="text-gray-700 mb-2">Witness the serene beauty of Netarhat hills and the stunning Lodh waterfall on a 2 days, 1-night package. Comfortable 7-seater car included.</p>
         <p class="text-gray-700 font-semibold mb-4">2 Days 1 Night – ₹8,500</p>
-        <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">WhatsApp Enquiry</a>
+        <a href="https://wa.me/917909044448?text=Hello%20Go%20Ranchi%20Trip,%20I%20would%20like%20to%20book%20the%20Netarhat%20%26%20Lodh%20Waterfalls%20Tour%20(2%20Days%201%20Night,%20₹8,500).%20Please%20assist%20me%20with%20the%20booking."
+           target="_blank"
+           class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+           WhatsApp Enquiry
+        </a>
       </div>
     </div>
 
     <!-- Package 3 -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
       <img src="images/betla_tour.jpg" class="w-full h-48 object-cover" alt="Ranchi sightseeing">
       <div class="p-6 text-center">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Ranchi + Patratu Sightseeing</h3>
         <p class="text-gray-700 mb-2">A complete 2-day tour covering Dassam, Jhona, Sita, Hundru waterfalls, Patratu dam, and popular local attractions in Ranchi city.</p>
         <p class="text-gray-700 font-semibold mb-4">2 Days – ₹10,000</p>
-        <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">WhatsApp Enquiry</a>
+        <a href="https://wa.me/917909044448?text=Hello%20Go%20Ranchi%20Trip,%20I%20would%20like%20to%20book%20the%20Ranchi%20+%20Patratu%20Sightseeing%20Tour%20(2%20Days,%20₹10,000).%20Please%20assist%20me%20with%20the%20booking."
+           target="_blank"
+           class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
+           WhatsApp Enquiry
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ONE-WAY DROP SERVICES -->
-<section class="max-w-7xl mx-auto px-6 py-16 bg-yellow-50">
-  <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">One-Way Drop Services</h2>
-
-  <div class="grid md:grid-cols-3 gap-8">
-    <!-- Drop 1 -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 text-center hover:shadow-xl transform hover:scale-105 transition duration-300">
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Jamshedpur Drop</h3>
-      <p class="text-gray-700 mb-2">Comfortable ride from Ranchi to Jamshedpur. Choose between 7-seater Ertiga or Sedan car.</p>
-      <p class="text-gray-700 font-semibold mb-4">Ertiga: ₹2,400 | Sedan: ₹2,200</p>
-      <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">WhatsApp Enquiry</a>
+  <section class="max-w-7xl mx-auto px-6 py-16 bg-yellow-50">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12" data-aos="fade-up">One-Way Drop Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Drop 1 -->
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Jamshedpur Drop</h3>
+        <p class="text-gray-700 mb-2">Comfortable ride from Ranchi to Jamshedpur. Choose between 7-seater Ertiga or Sedan car.</p>
+        <p class="text-gray-700 font-semibold mb-4">Ertiga: ₹2,400 | Sedan: ₹2,200</p>
+        <a href="https://wa.me/917909044448?text=Hello..." target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition transform hover:scale-105">WhatsApp Enquiry</a>
+      </div>
+      <!-- Drop 2 -->
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Hazaribagh Drop</h3>
+        <p class="text-gray-700 mb-2">Reliable one-way trip from Ranchi to Hazaribagh. Comfortable vehicles with experienced drivers.</p>
+        <p class="text-gray-700 font-semibold mb-4">Ertiga: ₹2,500 | Sedan: ₹2,200</p>
+        <a href="https://wa.me/917909044448?text=Hello..." target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition transform hover:scale-105">WhatsApp Enquiry</a>
+      </div>
+      <!-- Drop 3 -->
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Bokaro Drop</h3>
+        <p class="text-gray-700 mb-2">Safe and quick one-way trip from Ranchi to Bokaro. Choose the vehicle according to your convenience.</p>
+        <p class="text-gray-700 font-semibold mb-4">Sedan: ₹2,000</p>
+        <a href="https://wa.me/917909044448?text=Hello..." target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition transform hover:scale-105">WhatsApp Enquiry</a>
+      </div>
     </div>
-
-    <!-- Drop 2 -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 text-center hover:shadow-xl transform hover:scale-105 transition duration-300">
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Hazaribagh Drop</h3>
-      <p class="text-gray-700 mb-2">Reliable one-way trip from Ranchi to Hazaribagh. Comfortable vehicles with experienced drivers.</p>
-      <p class="text-gray-700 font-semibold mb-4">Ertiga: ₹X,XXX | Sedan: ₹X,XXX</p>
-      <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">WhatsApp Enquiry</a>
-    </div>
-
-    <!-- Drop 3 -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 text-center hover:shadow-xl transform hover:scale-105 transition duration-300">
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Bokaro Drop</h3>
-      <p class="text-gray-700 mb-2">Safe and quick one-way trip from Ranchi to Bokaro. Choose the vehicle according to your convenience.</p>
-      <p class="text-gray-700 font-semibold mb-4">Sedan: ₹2,000</p>
-      <a href="https://wa.me/917909044448" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">WhatsApp Enquiry</a>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
   <!-- SERVICE CARDS -->
-  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
-    
-    <div class="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-xl transition">
-      <i data-feather="map" class="mx-auto w-12 h-12 text-yellow-500 mb-4"></i>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Local City Ride</h3>
-      <p class="text-gray-600">Book a cab for local trips, meetings, hospital visits, or city travel.</p>
-    </div>
+<div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
+    <i data-feather="map" class="mx-auto w-12 h-12 text-yellow-500 mb-4 animate-bounce"></i>
+    <h3 class="text-xl font-bold text-gray-900 mb-2">Local City Ride</h3>
+    <p class="text-gray-600">Book a cab for local trips, meetings, hospital visits, or city travel.</p>
+  </div>
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
+    <i data-feather="navigation" class="mx-auto w-12 h-12 text-yellow-500 mb-4 animate-bounce"></i>
+    <h3 class="text-xl font-bold text-gray-900 mb-2">Outstation Travel</h3>
+    <p class="text-gray-600">Visit nearby tourist places comfortably with our clean & safe cabs.</p>
+  </div>
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-2xl transform hover:-translate-y-2 transition duration-500">
+    <i data-feather="airplay" class="mx-auto w-12 h-12 text-yellow-500 mb-4 animate-bounce"></i>
+    <h3 class="text-xl font-bold text-gray-900 mb-2">Airport Pickup & Drop</h3>
+    <p class="text-gray-600">On-time pickup and drop service to Birsa Munda Airport.</p>
+  </div>
+</div>
 
-    <div class="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-xl transition">
-      <i data-feather="navigation" class="mx-auto w-12 h-12 text-yellow-500 mb-4"></i>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Outstation Travel</h3>
-      <p class="text-gray-600">Visit nearby tourist places comfortably with our clean & safe cabs.</p>
-    </div>
-
-    <div class="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-xl transition">
-      <i data-feather="airplay" class="mx-auto w-12 h-12 text-yellow-500 mb-4"></i>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Airport Pickup & Drop</h3>
-      <p class="text-gray-600">On-time pickup and drop service to Birsa Munda Airport.</p>
-    </div>
-
-  </section>
 
   <!-- FOOTER -->
  <!-- FOOTER -->
@@ -215,8 +222,10 @@
   </p>
 </footer>
 
-
+<!-- Include AOS JS before </body> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init();
     feather.replace();
     document.getElementById("menuBtn").onclick = () => {
       document.getElementById("mobileMenu").classList.toggle("hidden");
